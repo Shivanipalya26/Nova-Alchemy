@@ -6,9 +6,11 @@ import * as T from "@/styles/typography";
 const HomeHeroSection = () => {
   return (
     <section className="min-h-screen">
-      <div className="grid grid-cols-[1.5fr_2fr] gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_2fr] gap-4">
         <div className="flex items-end">
-          <HomeArrow />
+          <span className="hidden lg:block">
+            <HomeArrow />
+          </span>
         </div>
         <div className="">
           <video
@@ -24,11 +26,18 @@ const HomeHeroSection = () => {
       </div>
 
       <div className="">
-        <div className="grid grid-cols-[1.5fr_2fr] pt-10">
-          <T.P>House of digital aesthetics ©</T.P>
+        <div className="grid grid-cols-1 sm:grid-cols-[1.5fr_2fr] pt-10">
+          <T.P className="pb-3">
+            <span className="text-2xl sm:text-base">
+              House of digital aesthetics ©
+            </span>
+          </T.P>
+
           <div className="grid grid-cols-2 gap-8">
             <T.P>Place where well-crafted web projects are born.</T.P>
-            <T.P>We provide end-to-end web development and design services.</T.P>
+            <T.P>
+              We provide end-to-end web development and design services.
+            </T.P>
           </div>
         </div>
         <hr />

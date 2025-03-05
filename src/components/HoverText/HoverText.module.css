@@ -1,0 +1,30 @@
+.hoverPadding {
+    --pad-y: 8px;
+    --pad-x: 16px;
+    --scale-ratio: 6;
+    padding: var(--pad-y) var(--pad-x);
+    transition: padding 0.3s ease-in-out, background-color 0.3s ease-in-out,
+        border-radius 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@media (min-width: 640px) {
+    .hoverPadding {
+        --pad-y: 12px;
+        --pad-x: 24px;
+        --scale-ratio: 5;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hoverPadding {
+        --pad-y: 16px;
+        --pad-x: 32px;
+        --scale-ratio: 7;
+    }
+}
+
+.hovered {
+    padding: var(--pad-y) calc(var(--pad-x) * var(--scale-ratio));
+    border-radius: 24px;
+    transform: scale(1.05);
+}

@@ -5,19 +5,19 @@ import { TextRotating } from "../TextRotating";
 
 const HomeDesignSection = () => {
   return (
-    <section className="bg-gray-600 h-screen flex flex-col items-center justify-center text-center relative text-white">
+    <section className="bg-gray-600 h-screen flex flex-col items-center justify-center text-center relative text-white p-4 sm:p-8">
       <motion.span
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="absolute left-10 top-1/2 transform -translate-y-1/2 text-white text-[100px] md:text-[120px] font-thin"
+        className="absolute left-4 sm:left-10 top-1/2 transform -translate-y-1/2 text-white text-[50px] sm:text-[100px] md:text-[120px] font-thin"
       >
         (
       </motion.span>
 
-      <div className="text-white font-light leading-tight text-[50px] md:text-[120px]">
-        <T.H1>DESIGN</T.H1>
-        <T.H1>
+      <div className="text-white font-light leading-tight">
+        <T.H1 className="">DESIGN</T.H1>
+        <T.H1 className="">
           <TextRotating
             texts={[
               "THAT AMAZES",
@@ -33,7 +33,7 @@ const HomeDesignSection = () => {
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="absolute right-10 top-1/2 transform -translate-y-1/2 text-white text-[100px] md:text-[120px] font-thin"
+        className="absolute right-4 sm:right-10 top-1/2 transform -translate-y-1/2 text-white text-[50px] sm:text-[100px] md:text-[120px] font-thin"
       >
         )
       </motion.span>
