@@ -61,7 +61,7 @@ export const H4 = forwardRef<
 >(({ children, className, ...props }, ref) => (
   <h4
     ref={ref}
-    className={`text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-pop ${className}`}
+    className={`text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-pop ${className}`}
     {...props}
   >
     {children}

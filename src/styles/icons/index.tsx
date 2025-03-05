@@ -1,9 +1,10 @@
-import { FC } from "react";
+import { CSSProperties, FC, forwardRef } from "react";
 
 interface IconProp {
   size?: number;
   color?: string;
   className?: string;
+  style?: CSSProperties;
 }
 
 export const HomeArrow: FC<IconProp> = ({ size = 256, color, className }) => (
@@ -25,7 +26,7 @@ export const HomeArrow: FC<IconProp> = ({ size = 256, color, className }) => (
   </svg>
 );
 
-export const NavIcon: FC<IconProp> = ({ size = 24, color, className }) => (
+export const NavIcon: FC<IconProp> = ({ size = 24 }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -42,3 +43,97 @@ export const NavIcon: FC<IconProp> = ({ size = 24, color, className }) => (
     <path d="M12 12v.01" />
   </svg>
 );
+
+export const IconPlus = forwardRef<SVGSVGElement, IconProp>(
+  ({ size = 24, color = "#000", className, style }, ref) => (
+    <svg
+      ref={ref}
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+      style={style}
+    >
+      <path
+        d="M12 5V19M5 12H19"
+        stroke={color}
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+);
+IconPlus.displayName = "IconPlus";
+
+export const IconMultiply = forwardRef<SVGSVGElement, IconProp>(
+  ({ size = 24, color = "#000", className, style }, ref) => (
+    <svg
+      ref={ref}
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+      style={style}
+    >
+      <path
+        d="M18 6L6 18M6 6L18 18"
+        stroke={color}
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+);
+IconMultiply.displayName = "IconMultiply";
+
+export const IconCircle = forwardRef<SVGSVGElement, IconProp>(
+  ({ size = 24, color = "#000", className, style }, ref) => (
+    <svg
+      ref={ref}
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+      style={style}
+    >
+      <circle
+        cx="12"
+        cy="12"
+        r="9"
+        stroke={color}
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+);
+IconCircle.displayName = "IconCircle";
+
+export const IconTriangle = forwardRef<SVGSVGElement, IconProp>(
+  ({ size = 24, color = "#000", className, style }, ref) => (
+    <svg
+      ref={ref}
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+      style={style}
+    >
+      <path
+        d="M12 3L22 19H2L12 3Z"
+        stroke={color}
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+);
+IconTriangle.displayName = "IconTriangle";
