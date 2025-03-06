@@ -23,8 +23,8 @@ const data = [
 
 const HomeHeroHeadings = () => {
   return (
-    <section>
-      <div className="text-center pt-0 px-4 py-6 pb-36 md:p-[150px]">
+    <section className="py-4">
+      <div className="text-center md:p-[150px]">
         {data.map((item, index) => (
           <div key={index}>
             <HoverText href={item.link}>

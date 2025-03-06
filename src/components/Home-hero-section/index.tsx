@@ -5,7 +5,7 @@ import * as T from "@/styles/typography";
 
 const HomeHeroSection = () => {
   return (
-    <section className="min-h-screen">
+    <section>
       <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_2fr] gap-4">
         <div className="flex items-end">
           <span className="hidden lg:block">
